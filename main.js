@@ -1,16 +1,23 @@
 const { createApp } = Vue
-const arrayMusic = axios.get('server.php')
-    .then(function (response) {
-        this.arrayMusic = response.data
-        console.log(this.arrayMusic);
-    })
-    .catch(function (error) {
-        console.log(error);
-    })
 createApp({
     data() {
         return {
-            arrayMusic: arrayMusic
+            base_url: 'server.php',
+            disks: []
         }
     },
+    methods: {
+        fetchData(url) {
+            axios
+                .get(url)
+                .then(resp => {
+                    console.log(resp.data);
+                    this.disks = resp.data
+                })
+        }
+    },
+    mounted() {
+        this.fetchData(this.base_url)
+    }
+
 }).mount('#app')

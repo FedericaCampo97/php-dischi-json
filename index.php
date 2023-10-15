@@ -10,12 +10,22 @@
 
 <body>
     <div id="app">
-        <div v-for="music in arrayMusic">diocane</div>
+        <div class="container">
+            <div class="row">
+                <div class="col" v-for="disk in disks">
+                    <img :src="disk.poster" alt="">
+                </div>
+            </div>
+        </div>
+
+
     </div>
+
 </body>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js" integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="main.js"></script>
 
 </html>
