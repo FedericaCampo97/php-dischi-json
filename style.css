@@ -1,0 +1,21 @@
+img {
+    width: 75%;
+    max-height: auto;
+}
+
+body {
+    background-color: rgb(66, 66, 128);
+}
+
+.card {
+    max-height: 370px;
+    background-color: rgb(33, 33, 72);
+}
+
+h6 {
+    color: white;
+}
+
+p {
+    color: white;
+}
